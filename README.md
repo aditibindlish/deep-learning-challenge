@@ -56,15 +56,15 @@ So we analyse the underfitting scenario, that is the model doesnt have enough in
 
 In order to acheive target performance, we used various methods as described below:
 
-1) Tried to alter the number of neurons, epochs, added hidden layers and tried different activation functions, however, desired accuracy was not achieved. Only one iterastion was saved in the model for brevity.
+1) Tried to alter the number of neurons, epochs, added hidden layers and tried different activation functions, however, desired accuracy was not achieved. Only one iteration was saved in the model for brevity. Accuracy was 72.5%.
 
-2) Tried to drop some columns which did not represent very useful info, starting with 'Is Successful_N' as this is redundant. Multiple iterations were by dropping columns which logically looked like something that wouldnt affect a venyure's success, however even after dropping a number of columns, desired performance was not recieved.Only one iterastion was saved in the model for brevity.
+2) Tried to drop some columns which did not represent very useful info, starting with 'Is Successful_N' as this is redundant. Multiple iterations were by dropping columns which logically looked like something that wouldnt affect a venyure's success, however even after dropping a number of columns, desired performance was not recieved.Only one iterastion was saved in the model for brevity. Accuracy dropped to around 70.4%. 
 
-3) Also used the best hyperparameters method to get best number of layer, neurons and hidden layers, using keras_tuner library, however, even this method did not yield optimal results.
+3) Also used the best hyperparameters method to get best number of layer, neurons and hidden layers, using keras_tuner library, however, even this method did not yield optimal results. Accuracy was 72.9%.
 
-OPtimization results are saved in the file 'AlphabetSoupCharity_Optimization.h5'
+Optimization results are saved in the file 'AlphabetSoupCharity_Optimization.h5'
 
-Finally, we also tried another method, we allowed more unique values in the Classification column by retaining top 10 by value counts and binning others. The resulting model still did not achieve desirerd output.  
+4) Finally, we also tried another method, we allowed more unique values in the Classification column by retaining top 10 by value counts and binning others. The resulting model still did not achieve desirerd output. 
 
-Results are saved in the file 'AlphabetSoupCharity_model with change in data.h5'
+    The corresponding code is saved in file "Code_Change in Data.ipynb" and the corresponding results are saved in the file 'AlphabetSoupCharity_model with change in data.h5'
 
